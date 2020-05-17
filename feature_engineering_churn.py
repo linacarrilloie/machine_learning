@@ -3,6 +3,8 @@
 
 # In[300]:
 
+### Class Project for Machine Learning 2 where the challenge was apply feature engineering techniques
+### for a Logistic Regression model to estimate Churn at a company. 
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -105,7 +107,7 @@ def outliers(self, n_neighbors=2000):
         return outliers[0]
     
 #dataframe for only my numerical variables    
-hr_numerical = hr[['satisfaction_level',"last_evaluation"                         ,"average_montly_hours"]] 
+hr_numerical = hr[['satisfaction_level',"last_evaluation","average_montly_hours"]] 
 
 #following the process in datasets notebook
 X = hr_numerical
@@ -124,7 +126,7 @@ print('Rows Removed: {:.0f}'.format(len(outliers[0])))
 
 ## For Numerical Variables
 
-hr_numerical = hr[['satisfaction_level',"last_evaluation"                         ,"number_project","average_montly_hours","time_spend_company"]]
+hr_numerical = hr[['satisfaction_level',"last_evaluation" ,"number_project","average_montly_hours","time_spend_company"]]
 
 hr_numerical.hist(figsize=(12, 12), bins=50, xlabelsize=8, ylabelsize=8)
 
@@ -198,7 +200,7 @@ pt.fit(hr[['time_spend_company']])
 hr['time_spend_company'] = pt.transform(hr[['time_spend_company']])
 
 #redefine my numerical to include changes
-hr_numerical = hr[['satisfaction_level',"last_evaluation"                         ,"number_project","average_montly_hours","time_spend_company"]]
+hr_numerical = hr[['satisfaction_level',"last_evaluation"  ,"number_project","average_montly_hours","time_spend_company"]]
 
 
 # # 3. Baseline
@@ -601,8 +603,7 @@ print('Average F1: {:.5f}'.format(scores["test_score"].mean()))
 
 
 #hr_fe_cat = hr_fe.select_dtypes(include=['int64'])
-hr_fe_cat =hr_fe[["Work_accident","promotion_last_5years","salary_high","salary_low","salary_medium",                  "kmeans_0","kmeans_1","kmeans_2","kmeans_3","kmeans_4","time_spend_company_low",                 "time_spend_company_medium","time_spend_company_high","number_projects_low",                 "number_projects_medium","number_projects_high","1_11","1_12"]
-                ]
+hr_fe_cat =hr_fe[["Work_accident","promotion_last_5years","salary_high","salary_low","salary_medium","kmeans_0","kmeans_1","kmeans_2","kmeans_3","kmeans_4","time_spend_company_low",                 "time_spend_company_medium","time_spend_company_high","number_projects_low", "number_projects_medium","number_projects_high","1_11","1_12"]]
 
 
 # In[2796]:
