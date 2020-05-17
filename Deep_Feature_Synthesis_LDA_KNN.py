@@ -3,6 +3,7 @@
 
 # In[1]:
 
+#Deep Feature Synthesis and LDA for https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table
 
 import pandas as pd
 import numpy as np
